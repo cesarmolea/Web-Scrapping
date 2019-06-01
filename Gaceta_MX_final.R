@@ -26,7 +26,7 @@ link <- "http://gaceta.diputados.gob.mx/Gaceta" # This is the base url
 legislatura <- c("63") # Just 63 Legislature
 gaceta <- c("II", "III", "IV", "V", "VI") # Session number
 days <- as.numeric(days_in_month(1) + days_in_month(2) + days_in_month(3)) # Second ordinary period: Feb-Mar-Apr
-years <- as.character(c(2015:2018)) # We know that the 63th Legislatures was from 2015 to 2018
+years <- as.character(c(2015:2018)) # We know that the 63th Legislature was from 2015 to 2018
 
 years_vec <- rep(years, days)
 dates <- rep(NA, length(years)*days) # This is the size of the vector to store the dates
@@ -39,8 +39,6 @@ for (i in 1:length(years)){
   }
 
 dates <- unlist(list_of_vecs) # we get rid of the list
-
-
 date_full <- sort(rep(dates,length(gaceta))) # we repeat the date to then paste the roman numerals
 gaceta_full <- rep(gaceta, length(dates)) # we do the same the the roman numeral<-
 date_gaceta_full <- paste0(str_remove_all(as.character(date_full), pattern =  "-"), "-", gaceta_full, ".html") # we create the final part of the URL
@@ -86,11 +84,10 @@ match <- function(url) {
 ## 3. Using the function and the URLS#
 ######################################
 
-# Now that we create our function we use need to give it the vector of URLS where we want to extract the data
+# Now that we create our function we need to give it the vector of URLS where we want to extract the data
 # We use sapply to facilitate, this will yield a list
 list_BID <- sapply(out_links, match)
 date_BID <- as.data.frame(unlist(list_BID))
 
 # And then we can save it as a .csv file
-setwd("C:/Users/CESARMO/OneDrive - Inter-American Development Bank Group/ML course/NLP/Mexico")
 write.csv(date_BID, file = "text.csv")
