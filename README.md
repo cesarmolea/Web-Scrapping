@@ -1,2 +1,2 @@
-# Web-Scrapping of Gaceta Parlamentaria
-I performed Web Scrapping of the Gaceta Parlamentaria [Parliamentary Gazette] from the Mexican Chamber of Deputies to find the number and types of mentions of the "Inter-American Development Bank" within the initiatives prensented by the Deputies.
+# Web-Scrapping of Congressional Websites from Latin America
+I performed Web-Scrapping of different Congressional websites from Latin America to find the number and types of mentions of the "Inter-American Development Bank" during the parliamentary discussions.
