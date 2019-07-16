@@ -1,8 +1,8 @@
 ######################################
-##        Web Scrapping          #####
+##        Web-Scrapping          #####
 ######################################
 
-# This code performs webscrapping of Sessions from the Congress of Panama
+# This code performs Web-scrapping of Congressional Sessions in Panama
 
 ######################################
 ## 0. Install packages           #####
