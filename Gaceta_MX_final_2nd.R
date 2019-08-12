@@ -32,7 +32,7 @@ setwd("C:/Users/CESARMO/OneDrive - Inter-American Development Bank Group/ML cour
 link <- "http://gaceta.diputados.gob.mx/Gaceta" # This is the base url
 gaceta <- c("I", "II", "III", "IV", "V", "VI", "VII", "VIII") # Session number
 days <- as.numeric(days_in_month(2) + days_in_month(3) + days_in_month(4)) # Second ordinary period: Feb-Mar-Apr
-years <- as.character(c(2017:2018)) # From 2000 to 2018
+years <- as.character(c(2000:2018)) # From 2000 to 2018
 
 years_vec <- rep(years, days)
 dates <- rep(NA, length(years)*days) # This is the size of the vector to store the dates
